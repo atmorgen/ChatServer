@@ -14,9 +14,8 @@ export class PingerComponent implements OnInit {
   constructor(private db:AngularFireDatabase) { }
 
   ngOnInit() {
-    this.checkOnline()
     setInterval(() => {
-      //this.checkOnline()
+      this.checkOnline()
     }, 300000);
   }
 
@@ -25,8 +24,7 @@ export class PingerComponent implements OnInit {
     this.updateIsOnline();
     setTimeout(() => {
       this.checkPing()
-    }, 1000);
-
+    }, 10000);
   }
 
   async checkPing(){
